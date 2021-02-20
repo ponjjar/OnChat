@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type='text/javascript' src='scaledrone.min.js'></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="height=100%, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="Style.css">
+  <title>OnChat</title>
+  <script src="secure.js"></script>
+
+
+  <script>
+          if (location.protocol != 'https:')
+                {
+                location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+             }
+  function GetSelected (selectTag) {
+       //Se detectar http:
+
+        //--------
+       var selIndexes = "";
+		//---------identificador de opção selecionada na palheta de cores---------------
+       for (var i = 0; i < selectTag.options.length; i++) {
+           var optionTag = selectTag.options[i];
+           if (optionTag.selected) {
+            if (selIndexes.length > 0){
+             selIndexes += ", ";
+			 }
+             selIndexes += optionTag.value;
+			}
+       }
+       //---------------------------Palheta de cores<Opções>------------------------------------
+
+        if (selIndexes == "Padrão") {
+          document.querySelector('.message-form__input').style.backgroundColor = "#00040c";
+         document.querySelector('.message-form__button').style.backgroundColor = "#00040c";
+         document.querySelector('.members-list').style.backgroundColor = "#00040c";
+         document.querySelector('.messages').style.backgroundColor = "rgba(67, 62, 87, 0.8)";
+         document.body.style.backgroundImage = "url('Background/bg1.png')";
+        }
+       if (selIndexes == "Purple") {
+        document.querySelector('.members-count').style.backgroundColor = "rgba(67, 62, 87, 1)";
+        document.querySelector('.message-form__input').style.backgroundColor = "#00040c";
+        document.querySelector('.message-form__button').style.backgroundColor = "#00040c";
+        document.querySelector('.members-list').style.backgroundColor = "#00040c";
+        document.querySelector('.messages').style.backgroundColor = "#dcb0f5";
+        document.body.style.backgroundImage = "url('https://avatars.mds.yandex.net/get-pdb/1767376/7591c675-2d46-4603-ad45-1313505d2987/orig')";
+       }
+       if (selIndexes == "Night") {
+        document.querySelector('.members-count').style.backgroundColor = "#000205";
+        document.querySelector('.message-form__input').style.backgroundColor = "#000205";
+        document.querySelector('.message-form__button').style.backgroundColor = "#000205";
+        document.querySelector('.members-list').style.backgroundColor = "#000205";
+        document.querySelector('.messages').style.backgroundColor = "#00050f";
+        document.querySelector('.messages').style.border = "#00050f";
+        document.body.style.backgroundImage = "url('https://www.badatz.ca/wp-content/uploads/2017/10/025271-abstract-background-gaussian-blur.jpg')";
+       }
+       if (selIndexes == "Dark") {
+        document.querySelector('.members-count').style.backgroundColor = "#0f0f0f";
+        document.querySelector('.message-form__input').style.backgroundColor = "#292929";
+        document.querySelector('.message-form__button').style.backgroundColor = "#292929";
+        document.querySelector('.members-list').style.backgroundColor = "#0f0f0f";
+        document.querySelector('.messages').style.backgroundColor = "#1c1c1c";
+        document.body.style.backgroundImage = "url('https://thman.ga/Images/Dark.png')";
+       }
+       if (selIndexes == "Forest") {
+        document.querySelector('.members-count').style.backgroundColor = "#000a00";
+        document.querySelector('.message-form__input').style.backgroundColor = "#00040c";
+        document.querySelector('.message-form__button').style.backgroundColor = "#00040c";
+		document.querySelector('.members-list').style.backgroundColor = "#000a00";
+        document.querySelector('.messages').style.backgroundColor = "#d5fabe";
+        document.body.style.backgroundImage = "url('https://thman.ga/Images/Forest.jpg')";
+       }
+       if (selIndexes == "Blue Sky") {
+        document.querySelector('.members-count').style.backgroundColor = "#00080a";
+        document.querySelector('.message-form__input').style.backgroundColor = "#00040c";
+        document.querySelector('.message-form__button').style.backgroundColor = "#00040c";
+        document.querySelector('.members-list').style.backgroundColor = "#00080a";
+        document.querySelector('.messages').style.backgroundColor = "#a9cad1";
+        document.body.style.backgroundImage = "url('https://thman.ga/Images/Blue Sky.jpg')";
+       }
+       if (selIndexes == "Manga") {
+        document.querySelector('.members-count').style.backgroundColor = "#0 f0200";
+        document.querySelector('.message-form__input').style.backgroundColor = "#00040c";
+        document.querySelector('.message-form__button').style.backgroundColor = "#00040c";
+        document.querySelector('.members-list').style.backgroundColor = "#0f0200";
+		document.querySelector('.messages').style.backgroundColor = "#ffc1b8";
+        document.body.style.backgroundImage = "url('https://thman.ga/Images/Manga.jpg')";
+       }
+       if (selIndexes == "BlueBerry") {
+		    document.querySelector('.members-count').style.backgroundColor = "#000a05";
+        document.querySelector('.message-form__input').style.backgroundColor = "#00040c";
+        document.querySelector('.message-form__button').style.backgroundColor = "#00040c";
+        document.querySelector('.members-list').style.backgroundColor = "#000a05";
+        document.querySelector('.messages').style.backgroundColor = "rgba(0,10,5, 0.5)";
+        document.body.style.backgroundImage = "url('https://thman.ga/Images/BlueBerry.jpg')";
+       }
+       if (selIndexes == "Sad frog") {
+       	document.querySelector('.messages').style.backgroundColor =  'rgba(255, 103, 103, 0.6)';
+        document.querySelector('.members-count').style.backgroundColor = "#000a05";
+        document.querySelector('.message-form__input').style.backgroundColor = "#00040c";
+        document.querySelector('.message-form__button').style.backgroundColor = "#00040c";
+        document.querySelector('.members-list').style.backgroundColor = "#000a05";
+  document.body.style.backgroundImage = "url('https://thman.ga/Images/Sad Frog.jpg')";
+           }
+           if (selIndexes == "French Fries") {
+             document.querySelector('.messages').style.backgroundColor =  'rgba(247, 189, 119, 0.8)';
+            document.querySelector('.members-count').style.backgroundColor = "#000a05";
+            document.querySelector('.message-form__input').style.backgroundColor = "#00040c";
+            document.querySelector('.message-form__button').style.backgroundColor = "#00040c";
+            document.querySelector('.members-list').style.backgroundColor = "#000a05";
+      document.body.style.backgroundImage = "url('https://thman.ga/Images/French Fries.jpg')";
+    }
+    GetSelected(Palheta);
+	   //--------------------------||----------------------
+   }
+  </script>
+</head>
+<body bgcolor=gray>
+<!-------------------------Formulario inicial de login <Nomes,Senhas>---------------------------->
+	<div id="name">
+			<h1 align=center style="background-color:rgba(0 , 0 , 0 , 0.5);color: white;">Bem vindo ao OnChat</h1>
+			<input class="name-form_input" value="Guest :D" id="Name" maxlength="13" placeholder="Escreva seu nome..."/>
+			<input class="Login-form_button" value="Enviar" onclick="Button();GetSelected(Palheta);"type="submit"/>
+      <!-- Display login status -->
+      <!---<div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true"></div>----->
+
+      <div id="status"></div>
+      <!-- Display user profile data -->
+      </fb:login-button>
+	</div>
+	<!------------------Pagina principal ativa após o concluir o login <aqui ficara o chat>----------------------->
+  <div id="OnChatLogo"></div>
+  <div id="OnChat">
+
+
+		<select onchange="GetSelected (this);" id="Palheta">
+			<option selected>Padrão</option>
+      <option>Purple</option>
+			<option>Night</option>
+			<option>Dark</option>
+			<option>Forest</option>
+			<option>Blue Sky</option>
+			<option>Manga</option>
+			<option>BlueBerry</option>
+      <option>Sad frog</option>
+      <option>French Fries</option>
+		</select>
+		<!--=-=-=-=--=-=-=-=-==-=-=-Recarrega a pagina-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=--->
+		<input type="reset" value="Refresh" onClick="window.location.reload()"/>
+		<!--=-=-=-=--=-=--=-=-=--=-Contador de membros ==-=--=-=-=-=-=--=-==-=-=-=-=-=-=-->
+		<div class="members-count">
+		<!-------------------------**Numero de membros------------------------------------>
+		-
+		</div>
+		<!--=-=-==-=--=-==-=-=-==-Lista de membros e usuarios conectados-=-=-=-=-=-=-=-=-->
+		<div class="members-list">
+		<!------------------------**Nome dos membros <div = .member>---------------------->
+		-
+		</div>
+
+		<!--=-=-=-==-=-=-=-=-=--==--=-=-=--=-=-=Mensagens=-=-=--=-=-=-=-=-==-=-=-=-=-=-=-->
+		<div class="messages" id="messages">
+      <div id="logo">
+    <font color="white"><center><h1 align="center" style='position:relative;'>OnChat 1.1 <img id="Papainoel"width="60" height="60" src="https://image.flaticon.com/icons/png/512/2729/2729003.png"style='position:relative;' ></img></h1> </center></font>
+    <style>
+    </style>
+  </div>
+		<!----------------**Mensagem/Caixa de dialogo <Div = .message>-------------------->
+		</div>
+    <form class="message-form" onsubmit="return false;">
+      <button type="button"id="emojitoggle"onclick="if(document.getElementById('Emoji').style.display == 'block'){document.getElementById('Emoji').style.display = 'none';} else{document.getElementById('Emoji').style.display = 'block'; }">🙂 </button>
+      <style>
+      #Papainoel{
+          position:static;
+     margin-top: -200%;
+}   
+    </style>
+      <input class="message-form__input" contenteditable="true" id="MessageInput" placeholder="Escreva a mensagem.." maxlength="125"type="text"/>
+      <input class="message-form__button" value="Enviar" type="submit"/>
+          </form>
+      <!--=-=-=-=-=-=-=-=-=-=-Formulario para a digitação da mensagem=-=-=-=-=-=-=-=-=-->
+    <div class="Emoji" id="Emoji">
+    <!------------------------**EMOTICONS E FRESCURAS---------------------->
+    <button value="😀" onclick="document.querySelector('.message-form__input').value+='😀';" id="emojibutton">😀</button>
+    <button value="😉" onclick="document.querySelector('.message-form__input').value+='😉';" id="emojibutton">😉</button>
+    <button value="😂" onclick="document.querySelector('.message-form__input').value+='😂';" id="emojibutton">😂</button>
+    <br/>
+    <button value="😘" onclick="document.querySelector('.message-form__input').value+='😘';" id="emojibutton">😘</button>
+    <button value="😢" onclick="document.querySelector('.message-form__input').value+='😢';" id="emojibutton">😢</button>
+    <button value="😅" onclick="document.querySelector('.message-form__input').value+='😅';" id="emojibutton">😅</button>
+    <br/>
+    <button value="😆" onclick="document.querySelector('.message-form__input').value+='😆';" id="emojibutton">😆</button>
+    <button value="😋" onclick="document.querySelector('.message-form__input').value+='😋';"id="emojibutton">😋</button>
+    <button value="😎" onclick="document.querySelector('.message-form__input').value+='😎';" id="emojibutton">😎</button>
+    </div>
+
+  </div>
+
+
+<!--=-=-==-=-=-=-=--=-=-=-=-=-Carrega e aplica o script no site-=-=-=-=-=-=-=-=-=-=-=-=-->
+<script src="./script.js"></script>
+<!--------------------------------||-------------------------------------->
+</body>
+</html>

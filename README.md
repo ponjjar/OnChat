@@ -15,5 +15,4 @@ A falta de segurança na comunicação, faz com que a confidencialidade nas troc
   A rede social OnChat é programada em ***node.js, html, jquery e javascript***. Nela é possivel enviar mensagens criptografadas, que só são descriptografadas quando recebidas com sucesso, visando a segurança da informação e o caminho por onde ela passa. Todas as mensagens são apagadas em seguida do servidor, sendo mantida apenas no dispositivo.
  
 # Saiba mais
-  Veja mais em nosso site <a target="_blank" rel="noopener noreferrer" href="https://socialcat.ga/OnChat">Acessar OnChat</a>
-http://OnChat.github.io
+  Veja mais em nosso site <a target="_blank" rel="noopener noreferrer" href="https://caique-p.github.io/OnChat/portuguese/">Acessar OnChat</a>

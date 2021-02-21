@@ -16,3 +16,4 @@ A falta de segurança na comunicação, faz com que a confidencialidade nas troc
  
 # Saiba mais
   Veja mais em nosso site <a target="_blank" rel="noopener noreferrer" href="https://socialcat.ga/OnChat">Acessar OnChat</a>
+http://OnChat.github.io
